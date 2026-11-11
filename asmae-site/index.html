@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pour Asmae</title>
+<meta name="theme-color" content="#070306">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lock">
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<!-- SCÈNE 1 — THE BEGINNING -->
+<section id="s1"><div class="box"><p id="introText"></p><button id="go" class="btn"></button></div></section>
+
+<div id="bar"><i></i></div>
+<nav id="dots" aria-label="Progression du parcours"></nav>
+<div class="ui">
+  <button id="mus" class="pill" aria-pressed="false">♪ Musique</button>
+  <button id="top" class="pill">↑ Début</button>
+</div>
+
+<main id="site">
+  <!-- SCÈNE 2 — A SPECIAL PERSON -->
+  <section id="s2" data-t="Asmae"><p class="lead"></p><h1 class="name" id="name"></h1><i class="hint"></i></section>
+
+  <!-- SCÈNE 3 — THE PHOTO GALLERY -->
+  <section id="s3" data-t="Galerie">
+    <header class="hd rv"><small>Scène 3 · The Photo Gallery</small><h2>Chaque instant, une œuvre d’art</h2><p>Glisse · survole · clique pour ouvrir</p></header>
+    <div class="stage" id="stage">
+      <div class="tilt" id="tilt"><div class="ring" id="ring"></div></div>
+      <button class="nav pv" aria-label="Photo précédente">‹</button>
+      <button class="nav nx" aria-label="Photo suivante">›</button>
+    </div>
+  </section>
+  <section id="s3b" data-t="9 reasons">
+    <header class="hd rv"><small>Scène 3 · Nine reasons</small><h2>9 reasons why you’re special</h2></header>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- SCÈNE 4 — A MESSAGE FROM MY HEART -->
+  <section id="s4" data-t="Message">
+    <div class="aurora"><b></b><b></b><b></b></div>
+    <header class="hd rv"><small>Scène 4 · A message from my heart</small></header>
+    <div class="letter" id="letter"></div>
+  </section>
+
+  <!-- SCÈNE 5 — THE FINAL SURPRISE -->
+  <section id="s5" data-t="Surprise"><p class="f1"></p><p class="f2"></p><button id="again" class="btn"></button></section>
+</main>
+
+<div id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo en grand">
+  <button class="x" aria-label="Fermer">×</button>
+  <button class="pv" aria-label="Précédente">‹</button>
+  <figure><div id="lbm"></div><figcaption></figcaption></figure>
+  <button class="nx" aria-label="Suivante">›</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
